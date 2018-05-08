@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace FitnessTracker
 {
@@ -22,6 +22,24 @@ namespace FitnessTracker
                 else
                 {
                     int minutes = int.Parse(entry);
+
+                    if(minutes <= 10)
+                    {
+                        Console.WriteLine("It is a good start");
+                    }
+                    else if(minutes <= 30)
+                    {
+                        Console.WriteLine("Keep up the momentum");
+                    }
+                    else if(minutes <= 60)
+                    {
+                        Console.WriteLine("Getting back in shape, I see");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Showoff");
+                    }
+
                     exerciseTime = exerciseTime + minutes;
 
                     Console.WriteLine("You've entered " + exerciseTime + " minutes");
